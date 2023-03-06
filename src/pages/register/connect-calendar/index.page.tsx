@@ -1,7 +1,7 @@
 import { Button, Heading, MultiStep, Text } from '@ignite-ui/react'
 import { signIn, useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
-import { ArrowRight } from 'phosphor-react'
+import { ArrowRight, Check } from 'phosphor-react'
 
 import { Container, Header } from '../styles'
 import { AuthError, ConnectBox, ConnectItem } from './styles'
@@ -35,6 +35,7 @@ export default function Register() {
           {isSignedIn ? (
             <Button size="sm" disabled>
               Conectado
+              <Check />
             </Button>
           ) : (
             <Button
